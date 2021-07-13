@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 
 //Advanced
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 app.post('/contact-form', (req, res) => {
     fs.appendFileSync('formsubmissions.txt', `${req.body.email}\n`);
